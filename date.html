@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title> My First page</title>
+	</head>
+	<body>
+	<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">CLick here</button>
+	<p id="demo"></p>
+	</br>
+	<button type="button" onclick="document.getElementById('demo1').innerHTML ='hello java script'"> click me</button>
+	<p id="demo1"> this  content will change</p>
+	</br>
+	<P> click on image to chane it</P>
+	<img id="myimg" onclick="changeimage()" src="images/87357.jpg" height="200" width="200"></img>
+	<script>
+	function changeimage()
+	{
+		var image = document.getElementById('myimg');
+		if(image.src.match("87357"))
+		{
+			image.src = "images/publinks.png";
+		}
+		else
+		{
+			image.src ="images/87357.jpg";
+		}
+	}
+	</script>
+	</body>
+</html>

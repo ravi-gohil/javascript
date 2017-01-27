@@ -1,0 +1,30 @@
+<html>
+<body>
+<p id="clr">enter number between 1 to 10 </p>
+<input id="num">
+<button type="button" onclick="validate()"> submit</button>
+<script>
+function validate(){
+var n,txt,c, str, pos;
+n=document.getElementById('num').value;
+if(isNaN(n) || n<1 || n>10)
+{
+	txt="input is not valid";
+}
+else
+{
+	txt="input is valid";
+}
+document.getElementById('tag').innerHTML = txt;
+
+ c= document.getElementById('clr');
+ c.style.fontSize= "25px";
+ c.style.color = "red";
+ str = document.getElementById('clr').innerHTML;
+ pos = str.indexOf('num');
+ document.getElementById('tag').innerHTML = txt + pos;
+}
+</script>
+<p id="tag"></p>
+</body>
+</html>
